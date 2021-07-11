@@ -5,15 +5,15 @@ import { CoursesService } from './courses.service';
 @Component({
     selector: 'courses', //   <div class="courses"> ".courses" / <courses> "courses" / <div id="courses"> "#Courses"
     template: `
-            <input (keyup)="onKeyUp($event)" />
+            <input (keyup.enter)="onKeyUp()" />
 
             <button (click)="onSave($event)">save</button>
         `
     //search for dom style object properties
 })
 export class CoursesComponent{
-    onKeyUp(event:any) {
-        if (event.keyCode === 13) console.log("ENTER was Pressed");
+    onKeyUp() {
+        console.log("ENTER was Pressed");
     }
 
     onSave(event: any) {

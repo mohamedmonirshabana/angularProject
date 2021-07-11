@@ -5,12 +5,14 @@ import { CoursesService } from './courses.service';
 @Component({
     selector: 'courses', //   <div class="courses"> ".courses" / <courses> "courses" / <div id="courses"> "#Courses"
     template: `
-            <input #email (keyup.enter)="onKeyUp(email.value)" />
+            <input  [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" />
         `
-    //search for dom style object properties
-})
+    
+})//search for dom style object properties
 export class CoursesComponent{
-    onKeyUp(email:any) {
-        console.log(email);
+    email = "me@example.com";
+
+    onKeyUp() {
+        console.log(this.email);
     }
 }

@@ -5,12 +5,7 @@ import { CoursesService } from './courses.service';
 @Component({
     selector: 'courses', //   <div class="courses"> ".courses" / <courses> "courses" / <div id="courses"> "#Courses"
     template: `     
-        <img [src]="imageUrl" />
-        <table>
-            <tr>
-                <td [attr.colspan]="colSpan></td>
-            </tr>
-        </table>
+            <button class="btn btn-primary">Save</button>
         `
 })
 export class CoursesComponent{

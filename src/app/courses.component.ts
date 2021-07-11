@@ -7,6 +7,7 @@ import { CoursesService } from './courses.service';
     template: `
         <h2>{{ title }}</h2>
         <h2 [textContent]="title"></h2>
+        
         <img src="{{ imageUrl }}" />
         <img [src]="title" />
         `

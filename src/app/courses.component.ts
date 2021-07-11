@@ -6,21 +6,12 @@ import { CoursesService } from './courses.service';
     selector: 'courses', //   <div class="courses"> ".courses" / <courses> "courses" / <div id="courses"> "#Courses"
     template: `
         <h2>{{ title }}</h2>
-            <ul>
-                <li *ngFor="let course of courses">
-                    {{ course }}
-                </li>
-            </ul>
+        <h2 [textContent]="title"></h2>
+        <img src="{{ imageUrl }}" />
+        <img [src]="title" />
         `
 })
 export class CoursesComponent{
     title = "List of Courses";
-    courses;
-
-    constructor(service: CoursesService) {
-        // let service = new CoursesService();
-        this.courses = service.getCourses();
-    }
-    
-    //Logic for calling an HTTP service
+    imageUrl = "http://lorempixel.com/400/200";
 }

@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { CoursesService } from './courses.service';
 
 @Component({
     selector: 'courses', //   <div class="courses"> ".courses" / <courses> "courses" / <div id="courses"> "#Courses"
@@ -14,6 +15,12 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent{
     title = "List of Courses";
-    courses = ["angular", "Reactjs", "nodejs"];
+    courses;
+
+    constructor(service: CoursesService) {
+        // let service = new CoursesService();
+        this.courses = service.getCourses();
+    }
     
+    //Logic for calling an HTTP service
 }

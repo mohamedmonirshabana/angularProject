@@ -5,7 +5,7 @@ import { CoursesService } from './courses.service';
 @Component({
     selector: 'courses', //   <div class="courses"> ".courses" / <courses> "courses" / <div id="courses"> "#Courses"
     template: `
-            {{ text | summary }}
+            {{ text | summary:20 }}
         `
     
 })//search for dom style object properties

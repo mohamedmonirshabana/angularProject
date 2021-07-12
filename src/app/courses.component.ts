@@ -5,7 +5,7 @@ import { CoursesService } from './courses.service';
 @Component({
     selector: 'courses', //   <div class="courses"> ".courses" / <courses> "courses" / <div id="courses"> "#Courses"
     template: `
-            <input  [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" />
+            <input  [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
         `
     
 })//search for dom style object properties

@@ -19,6 +19,6 @@ export class CoursesComponent{
         student: 200,
         rating: 4.9745,
         price: 190.95,
-        releaseData: new Date(2016, 3, 1)
+        releaseDate: new Date(2016, 3, 1)
     }
 }

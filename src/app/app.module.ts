@@ -13,10 +13,10 @@ import { FavoriteComponent } from './favorite.component';
 @NgModule({
   declarations: [
     AppComponent,
+    FavoriteComponent,
     CourseComponent,
     CoursesComponent,
     SummaryPipe,
-    FavoriteComponent
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,7 @@ import { CoursesService } from './courses.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     CoursesService,

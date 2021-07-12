@@ -5,14 +5,20 @@ import { CoursesService } from './courses.service';
 @Component({
     selector: 'courses', //   <div class="courses"> ".courses" / <courses> "courses" / <div id="courses"> "#Courses"
     template: `
-            <input  [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+            {{ course.title | uppercase }} <br/>
+            {{ course.student | number }} <br/>
+            {{ course.rating | number:'1.2-2' }} <br/>
+            {{ course.price | currency: 'AUD':true:'3.2-2' }} <br/>
+            {{ course.releaseDate | date:'shortDate'}} <br/>
         `
     
 })//search for dom style object properties
 export class CoursesComponent{
-    email = "me@example.com";
-
-    onKeyUp() {
-        console.log(this.email);
+    course = {
+        title: "The Complete Angular Course",
+        student: 200,
+        rating: 4.9745,
+        price: 190.95,
+        releaseData: new Date(2016, 3, 1)
     }
 }

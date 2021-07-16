@@ -7,8 +7,5 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  viewMode = 'map';
-  changeViewMode(view:string) {
-    this.viewMode = view;
-  }
+  viewMode = 'somthingElse';
 }

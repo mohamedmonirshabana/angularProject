@@ -18,4 +18,9 @@ export class AppComponent {
     this.courses.push({ id: 4, name: 'C#' });
     console.log(this.courses);
   }
+
+  onRemove(course:any) {
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index, 1);
+  }
 }

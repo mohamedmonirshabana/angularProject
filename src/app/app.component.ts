@@ -8,17 +8,7 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 })
 export class AppComponent {
   
-  courses:any;
-
-  loadCourses() {
-    this.courses = [
-    { id: 1, name: 'javascript' },
-    { id: 2, name: 'Typescript' },
-    { id: 3, name: 'angularjs' },
-    
+  courses = [
+   1,2,3
   ];  
-  }
-  trackCourse(index:any, course:any) {
-    return course ? course.id : undefined;
-  }
 }

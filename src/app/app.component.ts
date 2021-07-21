@@ -13,4 +13,9 @@ export class AppComponent {
     { id: 3, name: 'angularjs' },
     
   ];
+
+  onAdd() {
+    this.courses.push({ id: 4, name: 'C#' });
+    console.log(this.courses);
+  }
 }

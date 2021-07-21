@@ -1,5 +1,6 @@
+<button (click)="onAdd">Add</button>
 <ul>
-    <li *ngFor="let course of courses; even as isEven">
-        {{ course.name }} <span *ngIf="isEven">(Even)</span>
+    <li *ngFor="let course of courses">
+        {{ course.name }}
     </li>
 </ul>

@@ -8,5 +8,8 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 })
 export class AppComponent {
   
-  canSave = true;
+  task = {
+    title: 'Review application',
+    assignee:null
+  }
 }

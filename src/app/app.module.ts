@@ -11,6 +11,7 @@ import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { PanelComponent } from './panel/panel.component';
 import { MtestComponent } from './mtest/mtest.component';
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MtestComponent } from './mtest/mtest.component';
     SummaryPipe,
     PanelComponent,
     MtestComponent,
+    InputFormatDirective,
   ],
   imports: [
     BrowserModule,

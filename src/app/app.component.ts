@@ -10,8 +10,6 @@ export class AppComponent {
   
   task = {
     title: 'Review application',
-    assignee: {
-      name:'John Smith'
-    }
+    assignee:null
   }
 }

@@ -13,6 +13,7 @@ import { PanelComponent } from './panel/panel.component';
 import { MtestComponent } from './mtest/mtest.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { SignuoFormComponent } from './signuo-form/signuo-form.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     MtestComponent,
     InputFormatDirective,
     ContactFormComponent,
+    SignuoFormComponent,
   ],
   imports: [
     BrowserModule,

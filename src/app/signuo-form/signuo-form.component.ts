@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-signuo-form',
+  selector: 'signuo-form',
   templateUrl: './signuo-form.component.html',
   styleUrls: ['./signuo-form.component.css']
 })

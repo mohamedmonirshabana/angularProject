@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { usernameValidators } from './username.validators';
 
 @Component({
   selector: 'signuo-form',
@@ -11,7 +12,7 @@ export class SignuoFormComponent {
     username: new FormControl('', [
       Validators.required,
       Validators.minLength(8),
-      
+      usernameValidators.cannotContainSpace
     ]),
     password: new FormControl('',Validators.required)
   });

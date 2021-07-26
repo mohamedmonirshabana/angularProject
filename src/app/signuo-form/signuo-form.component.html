@@ -1,7 +1,14 @@
 <form [formGroup]="form">
     <div class="form-group">
         <label for="username">Username</label>
-        <input formControlName="username" type="text" class="form-control" id="username">
+        <input
+            formControlName="username" 
+            type="text" 
+            class="form-control" 
+            id="username">
+            <div *ngIf="form.get('username')?.touched && form.get('username')?.invalid" class="alert alert-danger">
+                Username is Required
+            </div>
     </div>
     <div class="form-group">
         <label for="password">Password</label>

@@ -14,6 +14,7 @@ import { MtestComponent } from './mtest/mtest.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignuoFormComponent } from './signuo-form/signuo-form.component';
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SignuoFormComponent } from './signuo-form/signuo-form.component';
     InputFormatDirective,
     ContactFormComponent,
     SignuoFormComponent,
+    NewCourseFormComponent,
   ],
   imports: [
     BrowserModule,

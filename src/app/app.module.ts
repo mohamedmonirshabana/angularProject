@@ -15,6 +15,7 @@ import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignuoFormComponent } from './signuo-form/signuo-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
     ContactFormComponent,
     SignuoFormComponent,
     NewCourseFormComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,

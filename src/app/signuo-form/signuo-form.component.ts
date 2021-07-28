@@ -11,9 +11,9 @@ export class SignuoFormComponent {
   form = new FormGroup({
     username: new FormControl('', [
       Validators.required,
-      Validators.minLength(8),
+      Validators.minLength(3),
       usernameValidators.cannotContainSpace
-    ]),
+    ],usernameValidators.shouldBeUnique),
     password: new FormControl('',Validators.required)
   });
 

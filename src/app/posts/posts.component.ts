@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-posts',
+  selector: 'posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
-export class PostsComponent implements OnInit {
+export class PostsComponent {
 
-  constructor() { }
+  posts:any;
 
-  ngOnInit(): void {
+  constructor(http: HttpClient) {
+    http.get('https://jsonplaceholder.typicode.com/posts')
+      .subscribe(response => {
+        // console.log(response);
+        this.posts = response;
+      });
   }
-
 }

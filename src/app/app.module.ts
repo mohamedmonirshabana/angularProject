@@ -17,7 +17,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignuoFormComponent } from './signuo-form/signuo-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { PostsComponent } from './posts/posts.component';
-import { PostService } from './post.service';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [

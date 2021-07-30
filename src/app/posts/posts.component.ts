@@ -20,6 +20,9 @@ export class PostsComponent implements OnInit {
       .subscribe(response => {
         // console.log(response);
         this.posts = response;
+      }, error => {
+        alert('An unExpected Error occurred');
+        console.log(error);
       });
   }
 
@@ -35,6 +38,8 @@ export class PostsComponent implements OnInit {
         post.id = response.id;
         this.posts.splice(0,0,post);
         console.log(response);
+      }, error => {
+        console.log(error);
        });
   }
   updatePost(post: any) {
@@ -42,6 +47,8 @@ export class PostsComponent implements OnInit {
     this.services.updatePost(post)
       .subscribe(response => {
         console.log(response);
+      }, error => {
+        console.log(error);
       });
     // this.http.put(this.url, JSON.stringify(post));
   }
@@ -51,6 +58,8 @@ export class PostsComponent implements OnInit {
       .subscribe(response => {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
+      }, error => {
+        console.log(error);
       });
   }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AppError } from '../common/app-error';
+import { BadInput } from '../common/bad-input';
+import { NotFoundError } from '../common/not-dound-error';
 import { PostService } from '../services/post.service';
 
 @Component({
@@ -38,8 +41,13 @@ export class PostsComponent implements OnInit {
         post.id = response.id;
         this.posts.splice(0,0,post);
         console.log(response);
-      }, error => {
-        console.log(error);
+      },
+        (error: AppError) => {
+          if (error instanceof BadInput ) {
+            // this.form.setErrors(error.originalError);
+          } else {
+            console.log(error);
+          }
        });
   }
   updatePost(post: any) {
@@ -54,12 +62,19 @@ export class PostsComponent implements OnInit {
   }
   deletePost(post: any) {
     // this.http.delete(this.url + '/' + post.id)
-    this.services.deletePost(post)
+    this.services.deletePost(345)
       .subscribe(response => {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
-      }, error => {
-        console.log(error);
+      }, (error: AppError) => {
+        if (error instanceof NotFoundError )
+        {
+          alert('this Post has already been Deleted');
+          
+        } else {
+          alert('An unexpected error occurred');
+          console.log(error);
+        }
       });
   }
 }

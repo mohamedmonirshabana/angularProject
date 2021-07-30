@@ -19,6 +19,7 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
 // import { PostsComponent } from './posts/posts.component';
 // import { PostService } from './services/post.service';
 import { AppErrorHandler } from './common/app-error-handler';
+import { NavbarComponent } from './navbar/navbar.component';
 // import { DataService } from './services/data.service';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { AppErrorHandler } from './common/app-error-handler';
     ContactFormComponent,
     SignuoFormComponent,
     NewCourseFormComponent,
+    NavbarComponent,
     // PostsComponent,
   ],
   imports: [

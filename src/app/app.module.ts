@@ -16,9 +16,10 @@ import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignuoFormComponent } from './signuo-form/signuo-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
-import { PostsComponent } from './posts/posts.component';
-import { PostService } from './services/post.service';
+// import { PostsComponent } from './posts/posts.component';
+// import { PostService } from './services/post.service';
 import { AppErrorHandler } from './common/app-error-handler';
+// import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { AppErrorHandler } from './common/app-error-handler';
     ContactFormComponent,
     SignuoFormComponent,
     NewCourseFormComponent,
-    PostsComponent,
+    // PostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,8 @@ import { AppErrorHandler } from './common/app-error-handler';
   ],
   providers: [
     CoursesService,
-    PostService,
+    // PostService,
+    // DataService,
     {provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [AppComponent]

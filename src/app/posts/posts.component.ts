@@ -23,9 +23,6 @@ export class PostsComponent implements OnInit {
       .subscribe(response => {
         // console.log(response);
         this.posts = response;
-      }, error => {
-        alert('An unExpected Error occurred');
-        console.log(error);
       });
   }
 
@@ -43,11 +40,9 @@ export class PostsComponent implements OnInit {
         console.log(response);
       },
         (error: AppError) => {
-          if (error instanceof BadInput ) {
+          if (error instanceof BadInput) {
             // this.form.setErrors(error.originalError);
-          } else {
-            console.log(error);
-          }
+          } else throw error;
        });
   }
   updatePost(post: any) {
@@ -55,8 +50,6 @@ export class PostsComponent implements OnInit {
     this.services.updatePost(post)
       .subscribe(response => {
         console.log(response);
-      }, error => {
-        console.log(error);
       });
     // this.http.put(this.url, JSON.stringify(post));
   }
@@ -67,14 +60,10 @@ export class PostsComponent implements OnInit {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
       }, (error: AppError) => {
-        if (error instanceof NotFoundError )
-        {
+        if (error instanceof NotFoundError) {
           alert('this Post has already been Deleted');
           
-        } else {
-          alert('An unexpected error occurred');
-          console.log(error);
-        }
+        } else throw error;
       });
   }
 }

@@ -31,8 +31,6 @@ export class PostsComponent implements OnInit {
   createPost(input: HTMLInputElement) {
     let post: any = { title: input.value };
     input.value = '';
-
-    // this.http.post(this.url, JSON.stringify(post))
     this.services.createPost(post)
       .subscribe((response : any) => {
         post.id = response.id;
@@ -55,7 +53,7 @@ export class PostsComponent implements OnInit {
   }
   deletePost(post: any) {
     // this.http.delete(this.url + '/' + post.id)
-    this.services.deletePost(345)
+    this.services.deletePost(post.id)
       .subscribe(response => {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);

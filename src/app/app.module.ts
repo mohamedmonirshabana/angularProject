@@ -20,6 +20,9 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
 // import { PostService } from './services/post.service';
 import { AppErrorHandler } from './common/app-error-handler';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 // import { DataService } from './services/data.service';
 
 @NgModule({
@@ -36,6 +39,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     SignuoFormComponent,
     NewCourseFormComponent,
     NavbarComponent,
+    HomeComponent,
+    GithubProfileComponent,
+    NotFoundComponent,
     // PostsComponent,
   ],
   imports: [
